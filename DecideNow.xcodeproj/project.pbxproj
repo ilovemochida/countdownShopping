@@ -16,6 +16,12 @@
 		7241B1BA1DA9183F00F416ED /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1B91DA9183F00F416ED /* NextButton.swift */; };
 		7241B1BC1DA91E6C00F416ED /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1BB1DA91E6C00F416ED /* ScrollView.swift */; };
 		7241B1BE1DA9209900F416ED /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1BD1DA9209900F416ED /* Line.swift */; };
+		7241B1C01DA924F300F416ED /* PurchaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1BF1DA924F300F416ED /* PurchaceViewController.swift */; };
+		7241B1C31DA9264000F416ED /* NameForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C21DA9264000F416ED /* NameForm.swift */; };
+		7241B1C51DA9265D00F416ED /* AdressForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C41DA9265D00F416ED /* AdressForm.swift */; };
+		7241B1C71DA9267800F416ED /* CreditCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C61DA9267800F416ED /* CreditCardForm.swift */; };
+		7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C81DA9288E00F416ED /* MakeLabel.swift */; };
+		7241B1CB1DA92B9200F416ED /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CA1DA92B9200F416ED /* CancelButton.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -38,6 +44,12 @@
 		7241B1B91DA9183F00F416ED /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 		7241B1BB1DA91E6C00F416ED /* ScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		7241B1BD1DA9209900F416ED /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		7241B1BF1DA924F300F416ED /* PurchaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaceViewController.swift; sourceTree = "<group>"; };
+		7241B1C21DA9264000F416ED /* NameForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameForm.swift; sourceTree = "<group>"; };
+		7241B1C41DA9265D00F416ED /* AdressForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressForm.swift; sourceTree = "<group>"; };
+		7241B1C61DA9267800F416ED /* CreditCardForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardForm.swift; sourceTree = "<group>"; };
+		7241B1C81DA9288E00F416ED /* MakeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeLabel.swift; sourceTree = "<group>"; };
+		7241B1CA1DA92B9200F416ED /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,8 +92,20 @@
 				7241B1AD1DA901EB00F416ED /* Header.swift */,
 				7241B1B71DA9172300F416ED /* BuyButton.swift */,
 				7241B1B91DA9183F00F416ED /* NextButton.swift */,
+				7241B1CA1DA92B9200F416ED /* CancelButton.swift */,
 			);
 			name = Application;
+			sourceTree = "<group>";
+		};
+		7241B1C11DA9250700F416ED /* Purchace */ = {
+			isa = PBXGroup;
+			children = (
+				7241B1C21DA9264000F416ED /* NameForm.swift */,
+				7241B1C41DA9265D00F416ED /* AdressForm.swift */,
+				7241B1C61DA9267800F416ED /* CreditCardForm.swift */,
+				7241B1C81DA9288E00F416ED /* MakeLabel.swift */,
+			);
+			name = Purchace;
 			sourceTree = "<group>";
 		};
 		724FFF151DA8D0F600CC275C /* Controller */ = {
@@ -89,6 +113,7 @@
 			children = (
 				72B302F41DA8CAD500F553D3 /* ViewController.swift */,
 				7241B1AF1DA90F6300F416ED /* DetailViewController.swift */,
+				7241B1BF1DA924F300F416ED /* PurchaceViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -98,6 +123,7 @@
 			children = (
 				72B302F61DA8CAD500F553D3 /* Main.storyboard */,
 				72B302FB1DA8CAD500F553D3 /* LaunchScreen.storyboard */,
+				7241B1C11DA9250700F416ED /* Purchace */,
 				7241B1B21DA9110600F416ED /* Application */,
 				7241B1B11DA910E900F416ED /* Detail */,
 			);
@@ -288,7 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7241B1B61DA9162F00F416ED /* Footer.swift in Sources */,
+				7241B1C51DA9265D00F416ED /* AdressForm.swift in Sources */,
+				7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */,
 				7241B1AC1DA8EFDE00F416ED /* Item.swift in Sources */,
+				7241B1C71DA9267800F416ED /* CreditCardForm.swift in Sources */,
 				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,
 				7241B1B41DA9111D00F416ED /* Upper.swift in Sources */,
 				7241B1B81DA9172300F416ED /* BuyButton.swift in Sources */,
@@ -298,7 +327,10 @@
 				7241B1BA1DA9183F00F416ED /* NextButton.swift in Sources */,
 				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
 				7241B1AE1DA901EB00F416ED /* Header.swift in Sources */,
+				7241B1C01DA924F300F416ED /* PurchaceViewController.swift in Sources */,
+				7241B1CB1DA92B9200F416ED /* CancelButton.swift in Sources */,
 				72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */,
+				7241B1C31DA9264000F416ED /* NameForm.swift in Sources */,
 				7241B1B01DA90F6300F416ED /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

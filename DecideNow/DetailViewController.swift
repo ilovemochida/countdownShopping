@@ -40,7 +40,8 @@ class DetailViewController: UIViewController{
     }
     
     func goBuy(){
-        
+        let buy = PurchaceViewController()
+        self.present(buy, animated: true, completion: nil)
     }
     
 }

@@ -127,6 +127,8 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     }
     
     func likeFrontCardView() -> Void{
-        self.frontCardView.mdc_swipe(MDCSwipeDirection.right)
+//        self.frontCardView.mdc_swipe(MDCSwipeDirection.right)
+        let buy = PurchaceViewController()
+        self.present(buy, animated: true, completion: nil)
     }
 }
