@@ -78,7 +78,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
             options: options
         )
         
-        swipeView?.backgroundColor = UIColor.white
+        swipeView?.backgroundColor = UIColor.rgba(r: 248, g: 248, b: 248, a: 1.0)
         
         swipeView?.imageView.af_setImage(withURL: URL(string: url)!)
         swipeView?.imageView.frame = CGRect(x: 0, y: 0, width: (swipeView?.frame.width)!, height: (swipeView?.frame.width)!)
@@ -96,32 +96,30 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
         detail.backgroundColor = UIColor.cyan
         detail.setTitle("Detail", for: .normal)
         detail.setTitleColor(UIColor.white, for: .normal)
+        detail.addTarget(self, action: #selector(self.goDetail), for: .touchUpInside)
         swipeView?.addSubview(detail)
         
         return swipeView!
     }
     
     func constructNopeButton() -> Void{
-        let button:UIButton =  UIButton(type: UIButtonType.system)
-        button.frame = CGRect(x: 20, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
-        button.tintColor = UIColor(red: 247.0/255.0, green: 91.0/255.0, blue: 37.0/255.0, alpha: 1.0)
+        let frame = CGRect(x: 20, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
+        let button = UIButton.nextButton(frame: frame)
         button.addTarget(self, action: #selector(self.nopeFrontCardView), for: UIControlEvents.touchUpInside)
-        button.backgroundColor = UIColor.red
-        button.setTitle("NEXT", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
         self.view.addSubview(button)
     }
     
     func constructLikedButton() -> Void{
-        let button:UIButton = UIButton(type: UIButtonType.system)
-        button.frame = CGRect(x: self.view.frame.maxX - 20 - 100, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
-        button.tintColor = UIColor(red: 29.0/255.0, green: 245.0/255.0, blue: 106.0/255.0, alpha: 1.0)
+        let frame = CGRect(x: Const.SCREEN_WIDTH - 20 - 100, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
+        let button = UIButton.buyButton(frame: frame)
         button.addTarget(self, action: #selector(self.likeFrontCardView), for: UIControlEvents.touchUpInside)
-        button.backgroundColor = UIColor.blue
-        button.setTitle("BUY", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
         self.view.addSubview(button)
         
+    }
+    
+    func goDetail(){
+        let detail = DetailViewController()
+        self.present(detail, animated: true, completion: nil)
     }
     
     func nopeFrontCardView() -> Void{
