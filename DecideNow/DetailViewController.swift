@@ -32,10 +32,7 @@ class DetailViewController: UIViewController{
         footer.addSubview(buyButton)
         self.view.addSubview(footer)
         
-        myScrollView = UIScrollView()
-        myScrollView.frame = CGRect(x: 0, y: 112, width: Const.SCREEN_WIDTH, height: Const.SCREEN_HEIGHT - 112 - 50)
-        myScrollView.contentSize = CGSize(width: Const.SCREEN_WIDTH, height: Const.SCREEN_HEIGHT)
-        self.view.addSubview(myScrollView)
+        self.view.addSubview(UIScrollView.itemDetail())
     }
     
     func goNext(){
