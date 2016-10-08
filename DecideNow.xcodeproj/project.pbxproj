@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		724FFF191DA8D18B00CC275C /* TinderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF181DA8D18B00CC275C /* TinderUIView.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		40414608EEF1148E1AD4530E /* Pods-DecideNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecideNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecideNow/Pods-DecideNow.release.xcconfig"; sourceTree = "<group>"; };
 		42F97D27015FC9C4D16B228C /* Pods_DecideNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecideNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		724FFF181DA8D18B00CC275C /* TinderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderUIView.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,6 +29,7 @@
 		72B302F91DA8CAD500F553D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72B302FC1DA8CAD500F553D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72B302FE1DA8CAD500F553D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72F5A0C41DA8DF42005158A9 /* DecideNow-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecideNow-Bridging-Header.h"; sourceTree = "<group>"; };
 		E297BDA9560C843447C0EC3D /* Pods-DecideNow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecideNow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DecideNow/Pods-DecideNow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				72B302F41DA8CAD500F553D3 /* ViewController.swift */,
+				72F5A0C41DA8DF42005158A9 /* DecideNow-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -59,7 +59,6 @@
 			children = (
 				72B302F61DA8CAD500F553D3 /* Main.storyboard */,
 				72B302FB1DA8CAD500F553D3 /* LaunchScreen.storyboard */,
-				724FFF181DA8D18B00CC275C /* TinderUIView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				TargetAttributes = {
 					72B302EE1DA8CAD400F553D3 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -244,7 +244,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				724FFF191DA8D18B00CC275C /* TinderUIView.swift in Sources */,
 				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,
 				72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */,
 				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
@@ -372,10 +371,13 @@
 			baseConfigurationReference = E297BDA9560C843447C0EC3D /* Pods-DecideNow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DecideNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mochida3Project.DecideNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DecideNow/DecideNow-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -385,10 +387,12 @@
 			baseConfigurationReference = 40414608EEF1148E1AD4530E /* Pods-DecideNow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DecideNow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mochida3Project.DecideNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DecideNow/DecideNow-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

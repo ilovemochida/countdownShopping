@@ -1,15 +1,22 @@
 PODS:
   - Alamofire (4.0.1)
+  - AlamofireImage (3.0.0):
+    - Alamofire (~> 4.0)
+  - MDCSwipeToChoose (0.2.3)
   - SwiftyJSON (3.1.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
+  - MDCSwipeToChoose
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireImage: 6594aa1139a67dcd36cde6da79ea4e5b318e60fb
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
   SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
 
-PODFILE CHECKSUM: c067b1d152d1513fc04396db4eca6f9c01dfdad0
+PODFILE CHECKSUM: b8453d7e852aa05774da7959a8b0088c846a17aa
 
 COCOAPODS: 1.0.1
