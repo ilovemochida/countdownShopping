@@ -4,30 +4,63 @@ import UIKit
 import MDCSwipeToChoose
 import AlamofireImage
 
-class ViewController: UIViewController, MDCSwipeToChooseDelegate  {
-
-    var swipeCount = 0
+class ViewController: UIViewController, MDCSwipeToChooseDelegate {
+    
+    var people:[Item] = []
+    var currentPerson: Item!
+    var frontCardView: MDCSwipeToChooseView!
+    var backCardView: MDCSwipeToChooseView!
+    
     var photoURL = [
         "http://up.gc-img.net/post_img_web/2013/03/a3a43755438b42d881929eefc7161191_0.jpeg",
         "http://pic.prepics-cdn.com/pib1298076039/5731792_218x291.gif",
         "http://omosoku.com/wp-content/uploads/misawa-225x300.gif"
     ]
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         
-        let swipeView1 = createSwipeView(url: photoURL[0])
-        self.view.addSubview(swipeView1)
+        self.view.backgroundColor = Const.MAIN_BACKGROUND_COLOR
+        self.view.addSubview(UIView.makeHeader())
         
-        let swipeView2 = createSwipeView(url: photoURL[1])
-        self.view.insertSubview(swipeView2, belowSubview: swipeView1)
+        self.setMyFrontCardView(frontCardView: createSwipeView(url: photoURL[0]))
+        self.view.addSubview(self.frontCardView)
         
-        let swipeView3 = createSwipeView(url: photoURL[2])
-        self.view.insertSubview(swipeView3, belowSubview: swipeView2)
+        self.backCardView = createSwipeView(url: photoURL[1])
+        self.view.insertSubview(self.backCardView, belowSubview: self.frontCardView)
         
+        constructNopeButton()
+        constructLikedButton()
+    }
+    func suportedInterfaceOrientations() -> UIInterfaceOrientationMask{
+        return UIInterfaceOrientationMask.portrait
     }
     
-    func createSwipeView(url: String) -> UIView {
+    func view(_ view: UIView, wasChosenWith wasChosenWithDirection: MDCSwipeDirection) -> Void{
+        
+        if(wasChosenWithDirection == MDCSwipeDirection.left){
+        }
+        else{
+        }
+        if(self.backCardView != nil){
+            self.setMyFrontCardView(frontCardView: self.backCardView)
+        }
+        self.backCardView = createSwipeView(url: photoURL[2])
+        
+        if(backCardView != nil){
+            self.backCardView.alpha = 0.0
+            self.view.insertSubview(self.backCardView, belowSubview: self.frontCardView)
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseInOut, animations: {
+                self.backCardView.alpha = 1.0
+                },completion:nil)
+        }
+    }
+    
+    func setMyFrontCardView(frontCardView: MDCSwipeToChooseView) -> Void{
+        self.frontCardView = frontCardView
+    }
+    
+    func createSwipeView(url: String) -> MDCSwipeToChooseView {
         let options = MDCSwipeToChooseViewOptions()
         options.delegate = self
         options.likedText = "BUY"
@@ -38,23 +71,64 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate  {
         let swipeView = MDCSwipeToChooseView(
             frame: CGRect(
                 x: 0,
-                y: 100,
+                y: 82,
                 width: self.view.bounds.size.width,
-                height: self.view.bounds.size.height - 300
+                height: self.view.bounds.size.height - 150
             ),
             options: options
         )
         
+        swipeView?.backgroundColor = UIColor.white
+        
         swipeView?.imageView.af_setImage(withURL: URL(string: url)!)
+        swipeView?.imageView.frame = CGRect(x: 0, y: 0, width: (swipeView?.frame.width)!, height: (swipeView?.frame.width)!)
+        
+        let price = UILabel()
+        price.frame = CGRect(x: 30, y: (swipeView?.imageView.frame.maxY)! + 18, width: 150, height: 30)
+        price.text = "10,000yen <- (15,000yen) "
+        price.textColor = UIColor.red
+        price.textAlignment = NSTextAlignment.left
+        price.sizeToFit()
+        swipeView?.addSubview(price)
+        
+        let detail = UIButton()
+        detail.frame = CGRect(x: Const.SCREEN_WIDTH / 2 - 50, y: (swipeView?.frame.height)! - 40, width: 100, height: 30)
+        detail.backgroundColor = UIColor.cyan
+        detail.setTitle("Detail", for: .normal)
+        detail.setTitleColor(UIColor.white, for: .normal)
+        swipeView?.addSubview(detail)
         
         return swipeView!
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func constructNopeButton() -> Void{
+        let button:UIButton =  UIButton(type: UIButtonType.system)
+        button.frame = CGRect(x: 20, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
+        button.tintColor = UIColor(red: 247.0/255.0, green: 91.0/255.0, blue: 37.0/255.0, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.nopeFrontCardView), for: UIControlEvents.touchUpInside)
+        button.backgroundColor = UIColor.red
+        button.setTitle("NEXT", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        self.view.addSubview(button)
     }
-
-
+    
+    func constructLikedButton() -> Void{
+        let button:UIButton = UIButton(type: UIButtonType.system)
+        button.frame = CGRect(x: self.view.frame.maxX - 20 - 100, y: self.frontCardView.frame.maxY + 20, width: 100, height: 30)
+        button.tintColor = UIColor(red: 29.0/255.0, green: 245.0/255.0, blue: 106.0/255.0, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.likeFrontCardView), for: UIControlEvents.touchUpInside)
+        button.backgroundColor = UIColor.blue
+        button.setTitle("BUY", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        self.view.addSubview(button)
+        
+    }
+    
+    func nopeFrontCardView() -> Void{
+        self.frontCardView.mdc_swipe(MDCSwipeDirection.left)
+    }
+    
+    func likeFrontCardView() -> Void{
+        self.frontCardView.mdc_swipe(MDCSwipeDirection.right)
+    }
 }
-

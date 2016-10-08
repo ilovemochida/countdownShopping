@@ -10,7 +10,7 @@ import UIKit
 
 class Const {
     
-    static let MAIN_BACKGROUND_COLOR: UIColor = UIColor.rgba(r: 210.0, g: 210.0, b: 210.0, a: 1.0)
+    static let MAIN_BACKGROUND_COLOR: UIColor = UIColor.rgba(r: 236.0, g: 236.0, b: 236.0, a: 1.0)
     
     static let SCREEN_WIDTH: CGFloat = UIScreen.main.bounds.width
     

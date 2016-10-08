@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7241B1AC1DA8EFDE00F416ED /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1AB1DA8EFDE00F416ED /* Item.swift */; };
+		7241B1AE1DA901EB00F416ED /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1AD1DA901EB00F416ED /* Header.swift */; };
+		7241B1B01DA90F6300F416ED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1AF1DA90F6300F416ED /* DetailViewController.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		40414608EEF1148E1AD4530E /* Pods-DecideNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecideNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecideNow/Pods-DecideNow.release.xcconfig"; sourceTree = "<group>"; };
 		42F97D27015FC9C4D16B228C /* Pods_DecideNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecideNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7241B1AB1DA8EFDE00F416ED /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7241B1AD1DA901EB00F416ED /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7241B1AF1DA90F6300F416ED /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				72B302F41DA8CAD500F553D3 /* ViewController.swift */,
-				72F5A0C41DA8DF42005158A9 /* DecideNow-Bridging-Header.h */,
+				7241B1AF1DA90F6300F416ED /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -59,6 +65,7 @@
 			children = (
 				72B302F61DA8CAD500F553D3 /* Main.storyboard */,
 				72B302FB1DA8CAD500F553D3 /* LaunchScreen.storyboard */,
+				7241B1AD1DA901EB00F416ED /* Header.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -68,6 +75,7 @@
 			children = (
 				724FFF1A1DA8D19D00CC275C /* Const.swift */,
 				724FFF1C1DA8D20100CC275C /* Color.swift */,
+				7241B1AB1DA8EFDE00F416ED /* Item.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 				724FFF161DA8D10900CC275C /* View */,
 				724FFF151DA8D0F600CC275C /* Controller */,
 				72B302F91DA8CAD500F553D3 /* Assets.xcassets */,
+				72F5A0C41DA8DF42005158A9 /* DecideNow-Bridging-Header.h */,
 				72B302FE1DA8CAD500F553D3 /* Info.plist */,
 			);
 			path = DecideNow;
@@ -244,10 +253,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7241B1AC1DA8EFDE00F416ED /* Item.swift in Sources */,
 				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,
 				72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */,
 				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
+				7241B1AE1DA901EB00F416ED /* Header.swift in Sources */,
 				72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */,
+				7241B1B01DA90F6300F416ED /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
