@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		724FFF191DA8D18B00CC275C /* TinderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF181DA8D18B00CC275C /* TinderUIView.swift */; };
+		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
+		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
 		72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F41DA8CAD500F553D3 /* ViewController.swift */; };
 		72B302F81DA8CAD500F553D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72B302F61DA8CAD500F553D3 /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* Begin PBXFileReference section */
 		40414608EEF1148E1AD4530E /* Pods-DecideNow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DecideNow.release.xcconfig"; path = "Pods/Target Support Files/Pods-DecideNow/Pods-DecideNow.release.xcconfig"; sourceTree = "<group>"; };
 		42F97D27015FC9C4D16B228C /* Pods_DecideNow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DecideNow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		724FFF181DA8D18B00CC275C /* TinderUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderUIView.swift; sourceTree = "<group>"; };
+		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B302F21DA8CAD500F553D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72B302F41DA8CAD500F553D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,7 @@
 			children = (
 				72B302F61DA8CAD500F553D3 /* Main.storyboard */,
 				72B302FB1DA8CAD500F553D3 /* LaunchScreen.storyboard */,
+				724FFF181DA8D18B00CC275C /* TinderUIView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -60,6 +67,8 @@
 		724FFF171DA8D11200CC275C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				724FFF1A1DA8D19D00CC275C /* Const.swift */,
+				724FFF1C1DA8D20100CC275C /* Color.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -235,7 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724FFF191DA8D18B00CC275C /* TinderUIView.swift in Sources */,
+				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,
 				72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */,
+				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
 				72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
