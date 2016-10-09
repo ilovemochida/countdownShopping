@@ -22,6 +22,7 @@
 		7241B1C71DA9267800F416ED /* CreditCardForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C61DA9267800F416ED /* CreditCardForm.swift */; };
 		7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C81DA9288E00F416ED /* MakeLabel.swift */; };
 		7241B1CB1DA92B9200F416ED /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CA1DA92B9200F416ED /* CancelButton.swift */; };
+		7241B1CD1DA9D68900F416ED /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CC1DA9D68900F416ED /* Server.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		7241B1C61DA9267800F416ED /* CreditCardForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardForm.swift; sourceTree = "<group>"; };
 		7241B1C81DA9288E00F416ED /* MakeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeLabel.swift; sourceTree = "<group>"; };
 		7241B1CA1DA92B9200F416ED /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
+		7241B1CC1DA9D68900F416ED /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				724FFF1A1DA8D19D00CC275C /* Const.swift */,
 				724FFF1C1DA8D20100CC275C /* Color.swift */,
 				7241B1AB1DA8EFDE00F416ED /* Item.swift */,
+				7241B1CC1DA9D68900F416ED /* Server.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				TargetAttributes = {
 					72B302EE1DA8CAD400F553D3 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AS89J7BR9F;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -323,6 +327,7 @@
 				7241B1B81DA9172300F416ED /* BuyButton.swift in Sources */,
 				7241B1BC1DA91E6C00F416ED /* ScrollView.swift in Sources */,
 				72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */,
+				7241B1CD1DA9D68900F416ED /* Server.swift in Sources */,
 				7241B1BE1DA9209900F416ED /* Line.swift in Sources */,
 				7241B1BA1DA9183F00F416ED /* NextButton.swift in Sources */,
 				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
@@ -456,7 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = AS89J7BR9F;
 				INFOPLIST_FILE = DecideNow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mochida3Project.DecideNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,7 +479,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = AS89J7BR9F;
 				INFOPLIST_FILE = DecideNow/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.mochida3Project.DecideNow;
 				PRODUCT_NAME = "$(TARGET_NAME)";

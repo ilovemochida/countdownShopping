@@ -20,6 +20,13 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     override func viewDidLoad(){
         super.viewDidLoad()
         
+        Server.getItems(user_id: 2, completion: {response in
+            print("=========================================================================")
+            print(response)
+            print("=========================================================================")
+        })
+        
+        
         self.view.backgroundColor = Const.MAIN_BACKGROUND_COLOR
         self.view.addSubview(UIView.makeHeader())
         
