@@ -23,6 +23,8 @@
 		7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1C81DA9288E00F416ED /* MakeLabel.swift */; };
 		7241B1CB1DA92B9200F416ED /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CA1DA92B9200F416ED /* CancelButton.swift */; };
 		7241B1CD1DA9D68900F416ED /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CC1DA9D68900F416ED /* Server.swift */; };
+		7241B1CF1DA9EBFA00F416ED /* SecurityCodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */; };
+		7241B1D11DA9EE5100F416ED /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -52,6 +54,8 @@
 		7241B1C81DA9288E00F416ED /* MakeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeLabel.swift; sourceTree = "<group>"; };
 		7241B1CA1DA92B9200F416ED /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		7241B1CC1DA9D68900F416ED /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityCodeForm.swift; sourceTree = "<group>"; };
+		7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +109,9 @@
 				7241B1C21DA9264000F416ED /* NameForm.swift */,
 				7241B1C41DA9265D00F416ED /* AdressForm.swift */,
 				7241B1C61DA9267800F416ED /* CreditCardForm.swift */,
+				7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */,
 				7241B1C81DA9288E00F416ED /* MakeLabel.swift */,
+				7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */,
 			);
 			name = Purchace;
 			sourceTree = "<group>";
@@ -332,6 +338,8 @@
 				7241B1BA1DA9183F00F416ED /* NextButton.swift in Sources */,
 				724FFF1D1DA8D20100CC275C /* Color.swift in Sources */,
 				7241B1AE1DA901EB00F416ED /* Header.swift in Sources */,
+				7241B1D11DA9EE5100F416ED /* ErrorAlert.swift in Sources */,
+				7241B1CF1DA9EBFA00F416ED /* SecurityCodeForm.swift in Sources */,
 				7241B1C01DA924F300F416ED /* PurchaceViewController.swift in Sources */,
 				7241B1CB1DA92B9200F416ED /* CancelButton.swift in Sources */,
 				72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */,

@@ -13,6 +13,7 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     var nameForm: UITextField!
     var adressForm: UITextField!
     var creditForm: UITextField!
+    var securityCodeForm: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +42,14 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
         creditForm.delegate = self
         self.view.addSubview(creditForm)
         
+        let security_code = UILabel.makeLabel(y: creditForm.frame.maxY + 30, text: "Security Code Number:")
+        self.view.addSubview(security_code)
+        
+        securityCodeForm = UITextField.makeSecurityCodeForm(y: security_code.frame.maxY + 10)
+        securityCodeForm.delegate = self
+        self.view.addSubview(securityCodeForm)
+        
+        
         let footer = UIView.makeFooter()
         let cancel = UIButton.cancelButton(frame: CGRect(x: 32, y: 10, width: 100, height: 30))
         cancel.addTarget(self, action: #selector(self.canceling), for: .touchUpInside)
@@ -63,6 +72,9 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
         if(creditForm.isFirstResponder){
             creditForm.resignFirstResponder()
         }
+        if securityCodeForm.isFirstResponder {
+            securityCodeForm.resignFirstResponder()
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
@@ -71,10 +83,20 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     }
     
     func canceling(){
-        
+        dismiss(animated: true, completion: nil)
     }
     
     func buyButton(){
-        
+        if nameForm.text != "" && adressForm.text != "" && creditForm.text != "" && securityCodeForm.text != ""{
+            let name = nameForm.text
+            let adress = adressForm.text
+            let credit =  Int(creditForm.text!)
+            let security = Int(securityCodeForm.text!)
+            Server.purchaces(name: name!, adress: adress!, credit_card: credit!, security_code: security!, completion: {response in
+                
+            })
+        }else{
+            self.present(UIAlertController.errorAlert(), animated: true, completion: nil)
+        }
     }
 }
