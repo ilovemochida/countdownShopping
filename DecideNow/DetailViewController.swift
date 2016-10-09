@@ -15,9 +15,11 @@ class DetailViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let price: Int = currentItem.price
+        
         self.view.backgroundColor = UIColor.rgba(r: 248, g: 248, b: 248, a: 1.0)
         self.view.addSubview(UIView.makeHeader())
-        self.view.addSubview(UIView.makeUpper(price: "10,000yen"))
+        self.view.addSubview(UIView.makeUpper(price: "$" + String(price)))
         
         let footer = UIView.makeFooter()
         var frame = CGRect(x: 32, y: 10, width: 100, height: 30)
@@ -32,11 +34,12 @@ class DetailViewController: UIViewController{
         footer.addSubview(buyButton)
         self.view.addSubview(footer)
         
-        self.view.addSubview(UIScrollView.itemDetail())
+        self.view.addSubview(UIScrollView.itemDetail(item: self.currentItem))
     }
     
     func goNext(){
-        
+        Const.app.flag = true
+        self.dismiss(animated: true, completion: nil)
     }
     
     func goBuy(){

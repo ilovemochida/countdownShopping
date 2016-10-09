@@ -34,9 +34,9 @@ class Item: NSObject{
     
     init(json: JSON, index: Int) {
         self.name = json[index]["name"].string
-        self.id = json[index]["id"].int
-        self.price = json[index]["price"].int
-        self.pre_price = json[index]["pre_price"].int
+        self.id = json[index]["id"].int!
+        self.price = json[index]["price"].int!
+        self.pre_price = json[index]["pre_price"].int!
         self.detail = json[index]["detail"].string
         self.image_url = json[index]["image"]["url"].string
     }

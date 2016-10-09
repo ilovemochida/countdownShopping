@@ -25,6 +25,7 @@
 		7241B1CD1DA9D68900F416ED /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CC1DA9D68900F416ED /* Server.swift */; };
 		7241B1CF1DA9EBFA00F416ED /* SecurityCodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */; };
 		7241B1D11DA9EE5100F416ED /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */; };
+		7241B1D31DA9FECF00F416ED /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D21DA9FECF00F416ED /* SplashViewController.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		7241B1CC1DA9D68900F416ED /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityCodeForm.swift; sourceTree = "<group>"; };
 		7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
+		7241B1D21DA9FECF00F416ED /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				72B302F41DA8CAD500F553D3 /* ViewController.swift */,
 				7241B1AF1DA90F6300F416ED /* DetailViewController.swift */,
 				7241B1BF1DA924F300F416ED /* PurchaceViewController.swift */,
+				7241B1D21DA9FECF00F416ED /* SplashViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */,
 				7241B1AC1DA8EFDE00F416ED /* Item.swift in Sources */,
 				7241B1C71DA9267800F416ED /* CreditCardForm.swift in Sources */,
+				7241B1D31DA9FECF00F416ED /* SplashViewController.swift in Sources */,
 				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,
 				7241B1B41DA9111D00F416ED /* Upper.swift in Sources */,
 				7241B1B81DA9172300F416ED /* BuyButton.swift in Sources */,
