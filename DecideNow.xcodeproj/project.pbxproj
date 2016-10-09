@@ -26,6 +26,7 @@
 		7241B1CF1DA9EBFA00F416ED /* SecurityCodeForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */; };
 		7241B1D11DA9EE5100F416ED /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */; };
 		7241B1D31DA9FECF00F416ED /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D21DA9FECF00F416ED /* SplashViewController.swift */; };
+		7241B1D51DAA11AE00F416ED /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D41DAA11AE00F416ED /* CountDown.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -58,6 +59,7 @@
 		7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurityCodeForm.swift; sourceTree = "<group>"; };
 		7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		7241B1D21DA9FECF00F416ED /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		7241B1D41DAA11AE00F416ED /* CountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +103,7 @@
 				7241B1B71DA9172300F416ED /* BuyButton.swift */,
 				7241B1B91DA9183F00F416ED /* NextButton.swift */,
 				7241B1CA1DA92B9200F416ED /* CancelButton.swift */,
+				7241B1D41DAA11AE00F416ED /* CountDown.swift */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				7241B1B81DA9172300F416ED /* BuyButton.swift in Sources */,
 				7241B1BC1DA91E6C00F416ED /* ScrollView.swift in Sources */,
 				72B302F51DA8CAD500F553D3 /* ViewController.swift in Sources */,
+				7241B1D51DAA11AE00F416ED /* CountDown.swift in Sources */,
 				7241B1CD1DA9D68900F416ED /* Server.swift in Sources */,
 				7241B1BE1DA9209900F416ED /* Line.swift in Sources */,
 				7241B1BA1DA9183F00F416ED /* NextButton.swift in Sources */,

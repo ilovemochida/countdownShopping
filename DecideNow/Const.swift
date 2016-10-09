@@ -16,7 +16,7 @@ class Const {
     
     static let SCREEN_HEIGHT: CGFloat = UIScreen.main.bounds.height
     
-    static let MAIN_COLOR: UIColor = UIColor.rgba(r: 214, g: 62, b: 62, a: 1.0)
+    static let MAIN_COLOR: UIColor = UIColor.rgba(r: 223, g: 86, b: 86, a: 1.0)
     
     static let app: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 }

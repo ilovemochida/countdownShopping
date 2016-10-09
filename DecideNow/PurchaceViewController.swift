@@ -14,6 +14,11 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     var adressForm: UITextField!
     var creditForm: UITextField!
     var securityCodeForm: UITextField!
+    var timer: Timer!
+    var countdown: UIView!
+    var timeLabel: UILabel!
+    var count = 60
+    var fromTop = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +67,49 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        timeInit()
+        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+        self.timer.fire()
+    }
+    
+    func timeInit(){
+        countdown = UIView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
+        self.view.addSubview(countdown)
+        self.view.bringSubview(toFront: countdown)
+        
+        timeLabel = UILabel()
+        timeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        timeLabel.text = "\(self.count)"
+        timeLabel.font = UIFont.systemFont(ofSize: 35)
+        timeLabel.sizeToFit()
+        timeLabel.textColor = UIColor.white
+        timeLabel.backgroundColor = UIColor.clear
+        timeLabel.layer.position = countdown.center
+        self.view.addSubview(timeLabel)
+    }
+    
+    func updateTime(_ timer: Timer){
+        self.count -= 1
+        if self.count == 0{
+            timer.invalidate()
+            countdown.removeFromSuperview()
+            timeLabel.removeFromSuperview()
+            self.canceling()
+        }else{
+            timeLabel.text = "\(self.count)"
+            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(60 - CGFloat(self.count) * 2.5 / 6))
+            timeLabel.sizeToFit()
+            countdown.frame.size.width += 5 / 6
+            countdown.frame.size.height += 5 / 6
+            countdown.layer.cornerRadius += 2.5 / 6
+            countdown.frame.origin.x -= 5 / 6
+            countdown.frame.origin.y += 2.5 / 6
+            timeLabel.layer.position = countdown.center
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>?, with event: UIEvent?) {
         if(nameForm.isFirstResponder){
             nameForm.resignFirstResponder()
@@ -83,6 +131,9 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     }
     
     func canceling(){
+        if fromTop == true{
+            Const.app.flag = true
+        }
         dismiss(animated: true, completion: nil)
     }
     

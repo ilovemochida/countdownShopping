@@ -11,12 +11,10 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     var frontCardView: MDCSwipeToChooseView!
     var backCardView: MDCSwipeToChooseView!
     var index = 0
-    
-    var photoURL = [
-        "http://up.gc-img.net/post_img_web/2013/03/a3a43755438b42d881929eefc7161191_0.jpeg",
-        "http://pic.prepics-cdn.com/pib1298076039/5731792_218x291.gif",
-        "http://omosoku.com/wp-content/uploads/misawa-225x300.gif"
-    ]
+    var timer: Timer!
+    var countdown: UIView!
+    var timeLabel: UILabel!
+    var count = 10
     
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -35,13 +33,59 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
         
         constructNopeButton()
         constructLikedButton()
+        
+        timeInit()
+        
+    }
+    
+    func timeInit(){
+        countdown = UIView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
+        self.view.addSubview(countdown)
+        self.view.bringSubview(toFront: countdown)
+        
+        timeLabel = UILabel()
+        timeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        timeLabel.text = "\(self.count)"
+        timeLabel.font = UIFont.systemFont(ofSize: 35)
+        timeLabel.sizeToFit()
+        timeLabel.textColor = UIColor.white
+        timeLabel.backgroundColor = UIColor.clear
+        timeLabel.layer.position = countdown.center
+        self.view.addSubview(timeLabel)
+    }
+
+    func updateTime(_ timer: Timer){
+        self.count -= 1
+        if self.count == 0{
+            self.nopeFrontCardView()
+            self.count = 10
+            countdown.removeFromSuperview()
+            timeLabel.removeFromSuperview()
+            self.timeInit()
+        }else{
+            timeLabel.text = "\(self.count)"
+            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(60 - CGFloat(self.count) * 2.5))
+            timeLabel.sizeToFit()
+            countdown.frame.size.width += 5
+            countdown.frame.size.height += 5
+            countdown.layer.cornerRadius += 2.5
+            countdown.frame.origin.x -= 5
+            countdown.frame.origin.y += 2.5
+            timeLabel.layer.position = countdown.center
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateTime), userInfo: nil, repeats: true)
+        self.timer.fire()
         if Const.app.flag == true{
             self.nopeFrontCardView()
             Const.app.flag = false
+            self.count = 10
+            countdown.removeFromSuperview()
+            timeLabel.removeFromSuperview()
+            self.timeInit()
         }
     }
     
@@ -52,6 +96,10 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     func view(_ view: UIView, wasChosenWith wasChosenWithDirection: MDCSwipeDirection) -> Void{
         
         if(wasChosenWithDirection == MDCSwipeDirection.left){
+            self.count = 10
+            countdown.removeFromSuperview()
+            timeLabel.removeFromSuperview()
+            self.timeInit()
         }
         else{
             self.likeFrontCardView()
@@ -159,6 +207,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     }
     
     func goDetail(){
+        timer.invalidate()
         let detail = DetailViewController()
         detail.currentItem = self.currentItem
         self.present(detail, animated: true, completion: nil)
@@ -166,11 +215,17 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     
     func nopeFrontCardView() -> Void{
         self.frontCardView.mdc_swipe(MDCSwipeDirection.left)
+        self.count = 10
+        countdown.removeFromSuperview()
+        timeLabel.removeFromSuperview()
+        self.timeInit()
     }
     
     func likeFrontCardView() -> Void{
 //        self.frontCardView.mdc_swipe(MDCSwipeDirection.right)
+        timer.invalidate()
         let buy = PurchaceViewController()
+        buy.fromTop = true
         self.present(buy, animated: true, completion: nil)
     }
 }
