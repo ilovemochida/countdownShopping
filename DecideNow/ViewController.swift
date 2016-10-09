@@ -12,7 +12,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     var backCardView: MDCSwipeToChooseView!
     var index = 0
     var timer: Timer!
-    var countdown: UIView!
+    var countdown: UIImageView!
     var timeLabel: UILabel!
     var count = 10
     
@@ -39,14 +39,14 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     }
     
     func timeInit(){
-        countdown = UIView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
+        countdown = UIImageView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
         self.view.addSubview(countdown)
         self.view.bringSubview(toFront: countdown)
         
         timeLabel = UILabel()
-        timeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        timeLabel.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
         timeLabel.text = "\(self.count)"
-        timeLabel.font = UIFont.systemFont(ofSize: 35)
+        timeLabel.font = UIFont.systemFont(ofSize: 25)
         timeLabel.sizeToFit()
         timeLabel.textColor = UIColor.white
         timeLabel.backgroundColor = UIColor.clear
@@ -64,7 +64,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
             self.timeInit()
         }else{
             timeLabel.text = "\(self.count)"
-            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(60 - CGFloat(self.count) * 2.5))
+            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(50 - CGFloat(self.count) * 2.5))
             timeLabel.sizeToFit()
             countdown.frame.size.width += 5
             countdown.frame.size.height += 5
@@ -182,9 +182,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
         
         let detail = UIButton()
         detail.frame = CGRect(x: Const.SCREEN_WIDTH * 0.45 - 50, y: (swipeView?.frame.height)! - 40, width: 100, height: 30)
-        detail.backgroundColor = UIColor.cyan
-        detail.setTitle("Detail", for: .normal)
-        detail.setTitleColor(UIColor.white, for: .normal)
+        detail.setImage(#imageLiteral(resourceName: "DetailButton"), for: .normal)
         detail.addTarget(self, action: #selector(self.goDetail), for: .touchUpInside)
         swipeView?.addSubview(detail)
         
@@ -192,14 +190,14 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate {
     }
     
     func constructNopeButton() -> Void{
-        let frame = CGRect(x: 20, y: self.frontCardView.frame.maxY + 40, width: 100, height: 30)
+        let frame = CGRect(x: 70, y: self.frontCardView.frame.maxY + 15, width: 80, height: 80)
         let button = UIButton.nextButton(frame: frame)
         button.addTarget(self, action: #selector(self.nopeFrontCardView), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
     }
     
     func constructLikedButton() -> Void{
-        let frame = CGRect(x: Const.SCREEN_WIDTH - 20 - 100, y: self.frontCardView.frame.maxY + 40, width: 100, height: 30)
+        let frame = CGRect(x: Const.SCREEN_WIDTH - 70 - 80, y: self.frontCardView.frame.maxY + 15, width: 80, height: 80)
         let button = UIButton.buyButton(frame: frame)
         button.addTarget(self, action: #selector(self.likeFrontCardView), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)

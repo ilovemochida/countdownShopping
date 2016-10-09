@@ -15,7 +15,7 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     var creditForm: UITextField!
     var securityCodeForm: UITextField!
     var timer: Timer!
-    var countdown: UIView!
+    var countdown: UIImageView!
     var timeLabel: UILabel!
     var count = 60
     var fromTop = false
@@ -56,11 +56,11 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
         
         
         let footer = UIView.makeFooter()
-        let cancel = UIButton.cancelButton(frame: CGRect(x: 32, y: 10, width: 100, height: 30))
+        let cancel = UIButton.cancelButton(frame: CGRect(x: 90, y: 5, width: 50, height: 50))
         cancel.addTarget(self, action: #selector(self.canceling), for: .touchUpInside)
         footer.addSubview(cancel)
         
-        let buy = UIButton.buyButton(frame: CGRect(x: Const.SCREEN_WIDTH - 32 - 100, y: 10, width: 100, height: 30))
+        let buy = UIButton.buyButton(frame: CGRect(x: Const.SCREEN_WIDTH - 90 - 50, y: 5, width: 50, height: 50))
         buy.addTarget(self, action: #selector(self.buyButton), for: .touchUpInside)
         footer.addSubview(buy)
         self.view.addSubview(footer)
@@ -75,14 +75,14 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
     }
     
     func timeInit(){
-        countdown = UIView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
+        countdown = UIImageView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
         self.view.addSubview(countdown)
         self.view.bringSubview(toFront: countdown)
         
         timeLabel = UILabel()
-        timeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        timeLabel.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
         timeLabel.text = "\(self.count)"
-        timeLabel.font = UIFont.systemFont(ofSize: 35)
+        timeLabel.font = UIFont.systemFont(ofSize: 25)
         timeLabel.sizeToFit()
         timeLabel.textColor = UIColor.white
         timeLabel.backgroundColor = UIColor.clear
@@ -99,7 +99,7 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
             self.canceling()
         }else{
             timeLabel.text = "\(self.count)"
-            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(60 - CGFloat(self.count) * 2.5 / 6))
+            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(50 - CGFloat(self.count) * 2.5 / 6))
             timeLabel.sizeToFit()
             countdown.frame.size.width += 5 / 6
             countdown.frame.size.height += 5 / 6
@@ -144,7 +144,7 @@ class PurchaceViewController: UIViewController, UITextFieldDelegate {
             let credit =  Int(creditForm.text!)
             let security = Int(securityCodeForm.text!)
             Server.purchaces(name: name!, adress: adress!, credit_card: credit!, security_code: security!, completion: {response in
-                
+                self.present(UIAlertController.finish(), animated: true, completion: nil)
             })
         }else{
             self.present(UIAlertController.errorAlert(), animated: true, completion: nil)

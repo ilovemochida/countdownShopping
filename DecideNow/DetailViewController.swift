@@ -13,7 +13,7 @@ class DetailViewController: UIViewController{
     var currentItem: Item!
     var myScrollView: UIScrollView!
     var timer: Timer!
-    var countdown: UIView!
+    var countdown: UIImageView!
     var timeLabel: UILabel!
     var count = 30
     
@@ -26,11 +26,11 @@ class DetailViewController: UIViewController{
         self.view.addSubview(UIView.makeUpper(price: "$" + String(price)))
         
         let footer = UIView.makeFooter()
-        var frame = CGRect(x: 32, y: 10, width: 100, height: 30)
+        var frame = CGRect(x: 90, y: 5, width: 50, height: 50)
         let nextButton = UIButton.nextButton(frame: frame)
         nextButton.addTarget(self, action: #selector(self.goNext), for: .touchUpInside)
         
-        frame = CGRect(x: Const.SCREEN_WIDTH - 32 - 100, y: 10, width: 100, height: 30)
+        frame = CGRect(x: Const.SCREEN_WIDTH - 90 - 50, y: 5, width: 50, height: 50)
         let buyButton = UIButton.buyButton(frame: frame)
         buyButton.addTarget(self, action: #selector(self.goBuy), for: .touchUpInside)
         
@@ -54,14 +54,14 @@ class DetailViewController: UIViewController{
     }
     
     func timeInit(){
-        countdown = UIView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
+        countdown = UIImageView.makeCountDownView(frame: CGRect(x: Const.SCREEN_WIDTH - 60, y: 72, width: 50, height: 50))
         self.view.addSubview(countdown)
         self.view.bringSubview(toFront: countdown)
         
         timeLabel = UILabel()
-        timeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 30)
+        timeLabel.frame = CGRect(x: 0, y: 0, width: 120, height: 120)
         timeLabel.text = "\(self.count)"
-        timeLabel.font = UIFont.systemFont(ofSize: 35)
+        timeLabel.font = UIFont.systemFont(ofSize: 25)
         timeLabel.sizeToFit()
         timeLabel.textColor = UIColor.white
         timeLabel.backgroundColor = UIColor.clear
@@ -72,12 +72,12 @@ class DetailViewController: UIViewController{
         self.count -= 1
         if self.count == 0{
             timer.invalidate()
-            countdown.removeFromSuperview()
             timeLabel.removeFromSuperview()
+            countdown.removeFromSuperview()
             self.goNext()
         }else{
             timeLabel.text = "\(self.count)"
-            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(60 - CGFloat(self.count) * 0.8))
+            timeLabel.font = UIFont.systemFont(ofSize: CGFloat(50 - CGFloat(self.count) * 0.8))
             timeLabel.sizeToFit()
             countdown.frame.size.width += 5 / 3
             countdown.frame.size.height += 5 / 3

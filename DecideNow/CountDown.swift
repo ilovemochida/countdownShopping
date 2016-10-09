@@ -8,13 +8,11 @@
 
 import UIKit
 
-extension UIView{
-    class func makeCountDownView(frame: CGRect) -> UIView{
-        let view = UIView()
+extension UIImageView{
+    class func makeCountDownView(frame: CGRect) -> UIImageView{
+        let view = UIImageView()
         view.frame = frame
-        view.backgroundColor = UIColor.rgba(r: 7, g: 255, b: 7, a: 1.0)
-        view.layer.masksToBounds = true
-        view.layer.cornerRadius = view.frame.width / 2
+        view.image = #imageLiteral(resourceName: "baloon")
         
         return view
     }

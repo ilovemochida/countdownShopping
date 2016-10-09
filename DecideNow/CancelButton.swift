@@ -12,9 +12,7 @@ extension UIButton{
     class func cancelButton(frame: CGRect) -> UIButton{
         let button:UIButton =  UIButton()
         button.frame = frame
-        button.backgroundColor = UIColor.red
-        button.setTitle("CANCEL", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setImage(#imageLiteral(resourceName: "CancelButton"), for: .normal)
         return button
     }
 }

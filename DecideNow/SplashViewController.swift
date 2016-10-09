@@ -16,6 +16,12 @@ class SplashViewController: UIViewController{
         super.viewDidLoad()
         self.view.backgroundColor = Const.MAIN_COLOR
         
+        let image = UIImageView()
+        image.frame = CGRect(x: 0, y: 0, width: 300 / 2, height: 512 / 2)
+        image.image = #imageLiteral(resourceName: "baloon-white")
+        image.layer.position = self.view.center
+        self.view.addSubview(image)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

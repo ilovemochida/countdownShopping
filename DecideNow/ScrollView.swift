@@ -13,7 +13,7 @@ extension UIScrollView{
         let name: String = item.name
         let detail: String = item.detail
         let scroll = UIScrollView()
-        scroll.frame = CGRect(x: 0, y: 112, width: Const.SCREEN_WIDTH, height: Const.SCREEN_HEIGHT - 112 - 50)
+        scroll.frame = CGRect(x: 0, y: 112, width: Const.SCREEN_WIDTH, height: Const.SCREEN_HEIGHT - 112 - 60)
         scroll.contentSize = CGSize(width: Const.SCREEN_WIDTH, height: Const.SCREEN_HEIGHT)
         
         let itemTitle = UILabel()

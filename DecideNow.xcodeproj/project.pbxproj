@@ -27,6 +27,7 @@
 		7241B1D11DA9EE5100F416ED /* ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */; };
 		7241B1D31DA9FECF00F416ED /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D21DA9FECF00F416ED /* SplashViewController.swift */; };
 		7241B1D51DAA11AE00F416ED /* CountDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D41DAA11AE00F416ED /* CountDown.swift */; };
+		7241B1D71DAA330800F416ED /* Finish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241B1D61DAA330800F416ED /* Finish.swift */; };
 		724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1A1DA8D19D00CC275C /* Const.swift */; };
 		724FFF1D1DA8D20100CC275C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724FFF1C1DA8D20100CC275C /* Color.swift */; };
 		72B302F31DA8CAD500F553D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B302F21DA8CAD500F553D3 /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorAlert.swift; sourceTree = "<group>"; };
 		7241B1D21DA9FECF00F416ED /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7241B1D41DAA11AE00F416ED /* CountDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDown.swift; sourceTree = "<group>"; };
+		7241B1D61DAA330800F416ED /* Finish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Finish.swift; sourceTree = "<group>"; };
 		724FFF1A1DA8D19D00CC275C /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		724FFF1C1DA8D20100CC275C /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		72B302EF1DA8CAD500F553D3 /* DecideNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecideNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 				7241B1CE1DA9EBFA00F416ED /* SecurityCodeForm.swift */,
 				7241B1C81DA9288E00F416ED /* MakeLabel.swift */,
 				7241B1D01DA9EE5100F416ED /* ErrorAlert.swift */,
+				7241B1D61DAA330800F416ED /* Finish.swift */,
 			);
 			name = Purchace;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				7241B1C51DA9265D00F416ED /* AdressForm.swift in Sources */,
 				7241B1C91DA9288E00F416ED /* MakeLabel.swift in Sources */,
 				7241B1AC1DA8EFDE00F416ED /* Item.swift in Sources */,
+				7241B1D71DAA330800F416ED /* Finish.swift in Sources */,
 				7241B1C71DA9267800F416ED /* CreditCardForm.swift in Sources */,
 				7241B1D31DA9FECF00F416ED /* SplashViewController.swift in Sources */,
 				724FFF1B1DA8D19D00CC275C /* Const.swift in Sources */,

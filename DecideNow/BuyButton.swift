@@ -12,9 +12,8 @@ extension UIButton{
     class func buyButton(frame: CGRect) -> UIButton{
         let button:UIButton =  UIButton()
         button.frame = frame
-        button.backgroundColor = UIColor.blue
-        button.setTitle("BUY", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
+        button.setImage(#imageLiteral(resourceName: "BuyButton"), for: .normal)
+        
         
         return button
     }
