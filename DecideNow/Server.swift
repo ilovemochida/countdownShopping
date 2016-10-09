@@ -62,4 +62,20 @@ class Server: Any{
         })
     }
     
+    class func purchaces(name: String, adress: String, credit_card: Int, security_code: Int, completion: ((JSON)->Void)?) {
+        let url = host + "item_users"
+        let parameters = ["name": name, "adress": adress, "credit_card": credit_card, "security_code": security_code] as [String: Any]
+        Alamofire.request(url, method: HTTPMethod.post, parameters: parameters).validate().responseJSON(completionHandler: {response in
+            if response.result.error != nil{
+                print(response.result.error)
+                let json: JSON = "error"
+                completion!(json)
+            }else{
+                if let value = response.result.value {
+                    completion!(JSON(value))
+                }
+            }
+        })
+    }
+    
 }
