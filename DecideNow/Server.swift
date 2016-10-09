@@ -28,6 +28,22 @@ class Server: Any{
                 }
             }
         })
-
     }
+    
+    class func postUsers(devise_token: String, completion: ((JSON)->Void)?) {
+        let url = host + "users"
+        let parameters = ["devise_token": devise_token] as [String: Any]
+        Alamofire.request(url, method: HTTPMethod.post, parameters: parameters).validate().responseJSON(completionHandler: {response in
+            if response.result.error != nil{
+                print(response.result.error)
+                let json: JSON = "error"
+                completion!(json)
+            }else{
+                if let value = response.result.value {
+                    completion!(JSON(value))
+                }
+            }
+        })
+    }
+    
 }
