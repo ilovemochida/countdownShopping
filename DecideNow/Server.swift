@@ -46,4 +46,20 @@ class Server: Any{
         })
     }
     
+    class func check(user_id: Int, item_id: Int, completion: ((JSON)->Void)?) {
+        let url = host + "item_users"
+        let parameters = ["user_id": user_id, "item_id": item_id] as [String: Any]
+        Alamofire.request(url, method: HTTPMethod.post, parameters: parameters).validate().responseJSON(completionHandler: {response in
+            if response.result.error != nil{
+                print(response.result.error)
+                let json: JSON = "error"
+                completion!(json)
+            }else{
+                if let value = response.result.value {
+                    completion!(JSON(value))
+                }
+            }
+        })
+    }
+    
 }
