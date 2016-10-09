@@ -13,7 +13,7 @@ extension UITextField{
         let form = UITextField()
         form.frame = CGRect(x: 30, y: y, width: Const.SCREEN_WIDTH - 60, height: 30)
         form.placeholder = "credit number"
-        form.keyboardType = .default
+        form.keyboardType = .numberPad
         form.backgroundColor = UIColor.white
         form.borderStyle = UITextBorderStyle.roundedRect
         return form
